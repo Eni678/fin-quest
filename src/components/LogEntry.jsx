@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import API_URL from '../config';
 const API_URL = 'http://localhost:3001/api';
 
 const GenericForm = ({ title, fields, endpoint, refreshData }) => {
