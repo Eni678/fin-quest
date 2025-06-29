@@ -89,7 +89,10 @@ app.put("/api/tasks/:id", (req, res) => {
 
 
 // --- Email Reminders (No changes here) ---
-app.listen(PORT, () => console.log(`Backend server running on http://localhost:${PORT}`));
+// At the bottom of backend/server.js
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
 const transporter = nodemailer.createTransport({ service: 'gmail', auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS } });
 const sendReminder = (timeOfDay) => {
     const mailOptions = { from: process.env.EMAIL_USER, to: process.env.EMAIL_RECIPIENT, subject: `${timeOfDay} Fin-Quest Reminder ⚔️`, text: `Greetings, Adventurer! Your ${timeOfDay.toLowerCase()} quest awaits. Log your finances and check your mission progress! http://localhost:5173` };
