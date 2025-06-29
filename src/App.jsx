@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Dashboard from './components/Dashboard';
 import Missions from './components/Missions';
 import LogEntry from './components/LogEntry';
-import API_URL from './config';
+import { API_URL } from '../config';
 
 
 
