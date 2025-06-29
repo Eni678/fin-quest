@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Confetti from 'react-confetti';
+import API_URL from '../config';
 
-const API_URL = 'http://localhost:3001/api';
 
 // --- NEW Task Checklist Component ---
 const TaskChecklist = ({ project, refreshData }) => {
